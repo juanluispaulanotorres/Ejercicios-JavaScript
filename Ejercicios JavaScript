@@ -35,7 +35,7 @@ arrCities.filter((o) => o.country == 'Spain' && o.capital == false);
 */
 
 // Ejercicio 4
-
+/*
 const arrNumber1 = [1,2,3];
 const arrNumber2 = [1,2,3,4,5];
 const arrNumber3 = [1,3,4,7,2];
@@ -46,4 +46,25 @@ commonArray.push(arrNumber1, arrNumber2, arrNumber3);
 commonArray.reduce((a, array) => (
   a.filter(digit => array.includes(digit))
 ));
+*/
 
+// Ejercicio 5
+
+const arrCities2 = [
+  {city: 'Logroño', country: 'Spain', capital: false},
+  {city: 'Bordeaux', country: 'France', capital: false},
+  {city: 'Madrid', country: 'Spain', capital: true},
+  {city: 'Florence', country: 'Italy', capital: true},
+  {city: 'Oslo', country: 'Norway', capital: true},
+  {city: 'Jaén', country: 'Spain', capital: false}
+]
+
+
+const nuevo = arrCities2.filter((obj) => (obj.country == 'Spain' ? obj.isSpain = true : obj.isSpain = false) && obj.capital == false)
+
+nuevo.forEach((obj) => {
+  delete obj.capital;
+  delete obj.country;
+})
+
+console.log(nuevo);
