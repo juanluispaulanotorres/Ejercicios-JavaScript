@@ -146,7 +146,7 @@ function toLowerCaseKeys(obj) {
 */
 
 // Ejercicio 10
-
+/*
 const cadena = "<span><strong>Juan Luis</strong></span>";
 
 removeHTMLTags(cadena);
@@ -154,6 +154,27 @@ removeHTMLTags(cadena);
 function removeHTMLTags(cadena) {
   return cadena.replace(/(<([^>]+)>)/g, '');
 }
+*/
+
+// Ejercicio 11
+
+const array = [1,2,3,4,5,6,7];
+const numElementos = 3;
+
+splitArrayIntoChunks(array, numElementos);
+
+function splitArrayIntoChunks(array, numElementos) {
+  const nuevoArray = [];
+
+  for (let i = 0; i < array.length; i += numElementos) {
+  	nuevoArray.push(array.slice(i, i + numElementos));
+	}
+  
+  return nuevoArray;
+}
+
+
+
 
 
 
