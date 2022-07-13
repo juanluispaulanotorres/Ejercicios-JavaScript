@@ -71,7 +71,7 @@ console.log(nuevo);
 */
 
 // Ejercicio 6
-
+/*
 const numFloat = 2.35255;
 const numDecimales = 1;
 
@@ -87,3 +87,66 @@ function redondeo(numero, decimales) {
   
   return parseFloat(resultado);
 }
+*/
+
+// Ejercicio 7
+/*
+const obj = {
+  a: 1,
+  b: '2',
+  c: 3
+}
+
+
+
+function returnFlasyValues(obj, funcion) {
+  
+}
+*/
+
+// Ejercicio 9
+
+const obj = {
+  NaMe: 'Juan Luis',
+  ADDress: 'Home Street'
+}
+
+const keys = Object.keys(obj);
+
+keys.forEach(k => k.toLowerCase());
+
+
+delete obj.name
+delete obj.address
+
+
+Object.entries(obj).forEach(([key, value]) => {
+  console.log(key.toLowerCase());
+});
+
+//keys.map(k => k.toLowerCase());
+
+
+
+
+/*
+toLowerCaseKeys(obj);
+
+function toLowerCaseKeys(obj) {
+  const keys = Object.keys(obj);
+  keys.forEach((k) => k.toLowerCase());
+  
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
