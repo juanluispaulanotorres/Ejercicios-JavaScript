@@ -105,24 +105,29 @@ function returnFlasyValues(obj, funcion) {
 */
 
 // Ejercicio 9
-
+/*
 const obj = {
   NaMe: 'Juan Luis',
   ADDress: 'Home Street'
 }
+*/
+//delete obj.name
+//delete obj.address
 
-const keys = Object.keys(obj);
-
-keys.forEach(k => k.toLowerCase());
-
-
-delete obj.name
-delete obj.address
-
-
+/*
 Object.entries(obj).forEach(([key, value]) => {
-  console.log(key.toLowerCase());
+  key.toLowerCase();
+  console.log(obj)
 });
+*/
+
+
+/*
+for (let key in obj) {
+  key = key.toLowerCase();
+  obj.key = key
+}
+*/
 
 //keys.map(k => k.toLowerCase());
 
@@ -133,20 +138,22 @@ Object.entries(obj).forEach(([key, value]) => {
 toLowerCaseKeys(obj);
 
 function toLowerCaseKeys(obj) {
-  const keys = Object.keys(obj);
-  keys.forEach((k) => k.toLowerCase());
-  
+  for (let key in obj) {    
+  	key = key.toLowerCase();
+  }
+   return obj
 }
 */
 
+// Ejercicio 10
 
+const cadena = "<span><strong>Juan Luis</strong></span>";
 
+removeHTMLTags(cadena);
 
-
-
-
-
-
+function removeHTMLTags(cadena) {
+  return cadena.replace(/(<([^>]+)>)/g, '');
+}
 
 
 
