@@ -1,5 +1,5 @@
 // Ejercicio 1
-/*
+
 const arrNames = [
   {id: 1, name: 'Pepe'},
   {id: 2, name: 'Juan'},
@@ -7,21 +7,19 @@ const arrNames = [
   {id: 4, name: 'Toby'},
   {id: 5, name: 'Lala'}
 ]
+console.log("EJERCICIO 1");
+arrNames.find((obj) => obj.id == 3);
 
-const objId3 = arrNames[2];
-
-arrNames.find((o) => o.id == 3);
-*/
 
 // Ejercicio 2
-/*
-const arrDirty = [NaN, 0, 5, false, -1, '',undefined, 3, null, 'test'];
 
+const arrDirty = [NaN, 0, 5, false, -1, '',undefined, 3, null, 'test'];
+console.log("EJERCICIO 2");
 arrDirty.filter((v) => !isNaN(v) && v != undefined && v != false && v != null);
-*/
+
 
 // Ejercicio 3
-/*
+
 const arrCities = [
   {city: 'Logroño', country: 'Spain', capital: false},
   {city: 'Paris', country: 'France', capital: true},
@@ -31,25 +29,28 @@ const arrCities = [
   {city: 'Jaén', country: 'Spain', capital: false}
 ]
 
+console.log("EJERCICIO 3");
 arrCities.filter((o) => o.country == 'Spain' && o.capital == false);
-*/
+
 
 // Ejercicio 4
-/*
+
 const arrNumber1 = [1,2,3];
 const arrNumber2 = [1,2,3,4,5];
 const arrNumber3 = [1,3,4,7,2];
 
 const commonArray = [];
-commonArray.push(arrNumber1, arrNumber2, arrNumber3);
 
+const numElementosArray = commonArray.push(arrNumber1, arrNumber2, arrNumber3);
+
+console.log("EJERCICIO 4");
 commonArray.reduce((a, array) => (
   a.filter(digit => array.includes(digit))
 ));
-*/
+
 
 // Ejercicio 5
-/*
+
 const arrCities2 = [
   {city: 'Logroño', country: 'Spain', capital: false},
   {city: 'Bordeaux', country: 'France', capital: false},
@@ -67,14 +68,16 @@ nuevo.forEach((obj) => {
   delete obj.country;
 })
 
+console.log("EJERCICIO 5");
 console.log(nuevo);
-*/
+
 
 // Ejercicio 6
-/*
+
 const numFloat = 2.35255;
 const numDecimales = 1;
 
+console.log("EJERCICIO 6");
 redondeo(numFloat, numDecimales);
 
 function redondeo(numero, decimales) {
@@ -87,11 +90,11 @@ function redondeo(numero, decimales) {
   
   return parseFloat(resultado);
 }
-*/
+
 
 // Ejercicio 7
 
-
+console.log("EJERCICIO 7");
 returnFalsyValues({a: 1, b: '2', c: 3}, x => typeof x === 'string');
 
 function returnFalsyValues(obj, comparacion) {
@@ -105,14 +108,50 @@ function returnFalsyValues(obj, comparacion) {
 }
 
 
+// Ejercicio 8
+
+const numBytes = 123456789;
+const numDigitos = 5;
+const tipoDato = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+console.log("EJERCICIO 8");
+fromBytesToFormattedSizeUnits(numBytes);
+
+function fromBytesToFormattedSizeUnits(num, numDigitos = 3) {
+  integer = false;
+  
+  if (Number.isInteger(num)) {
+    integer = true;
+  }
+  
+	cont = 0;
+  
+  while (true) {
+    num /= 1000;
+    cont++;
+    if (num < 1000) {
+      break;
+    }
+  }
+
+  if (integer) {
+    resultado = Math.trunc(num);
+  } else {
+    resultado = num.toPrecision(numDigitos);
+  }
+
+  return resultado + tipoDato[cont];
+}
+
+
 // Ejercicio 9
-/*
+
 const obj = {
   NaMe: 'Juan Luis',
   ADDress: 'Home Street'
 }
 
-
+console.log("EJERCICIO 9");
 toLowerCaseKeys(obj);
 
 function toLowerCaseKeys(obj) {
@@ -125,23 +164,26 @@ function toLowerCaseKeys(obj) {
   
   return respuesta;
 }
-*/
+
+
 // Ejercicio 10
-/*
+
 const cadena = "<span><strong>Juan Luis</strong></span>";
 
+console.log("EJERCICIO 10");
 removeHTMLTags(cadena);
 
 function removeHTMLTags(cadena) {
   return cadena.replace(/(<([^>]+)>)/g, '');
 }
-*/
+
 
 // Ejercicio 11
-/*
+
 const array = [1,2,3,4,5,6,7];
 const numElementos = 3;
 
+console.log("EJERCICIO 11");
 splitArrayIntoChunks(array, numElementos);
 
 function splitArrayIntoChunks(array, numElementos) {
@@ -153,7 +195,7 @@ function splitArrayIntoChunks(array, numElementos) {
   
   return nuevoArray;
 }
-*/
+
 
 
 
